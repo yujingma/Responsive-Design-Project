@@ -1,0 +1,1593 @@
+@import "partials/setup";
+@import "partials/global";
+@import "partials/mixin";
+@import "partials/header";
+@import "partials/variables";
+@import "partials/footer";
+
+.aboutUs {
+	margin-top: 120px;
+	margin-bottom: 105px;
+	text-align: center;
+
+	@include respond-to('small') {
+		margin: auto;	
+		margin-top: 80px;
+		margin-bottom: 50px;
+		width: 100%;
+	}
+
+	h2 {
+		font-size: 36px;
+		text-transform: uppercase;
+		color: black;
+		margin-bottom: 60px;
+
+		@include respond-to('medium') {
+			font-size: 30px;
+			margin-bottom: 35px;
+		}
+
+		@include respond-to('small') {
+			font-size: 25px;
+			margin-bottom: 30px;	
+			text-align: center;
+		}
+	}
+
+	.whyBetter {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		@include respond-to('small') {
+			flex-direction: column;
+			max-width: 100%;
+		}
+
+		.img {
+			// max-height: 503px;
+			width: 50%;
+
+			@include respond-to('medium') {
+				display: block;
+				margin: 0 auto;
+			}
+
+			@include respond-to('small') {
+				margin: 0 auto;
+				margin-top: 15px;
+				width: 100%;
+			}
+		}
+
+		.details {
+			text-align: left;
+			margin-right: 40px;
+			width: 45%;
+
+			@include respond-to('medium') {
+				margin: 0;
+				width: 100%;
+			}
+
+			@include respond-to('small') {
+				margin: 0;
+				max-width: 100%;
+			}
+
+			.paragraph {
+				text-align: left;
+
+				@include respond-to('small') {
+					text-align: center;
+				}
+			}
+
+			h3 {
+				text-transform: capitalize;
+				color: black;
+				font-size: 30px;
+				margin-top: 0;
+
+				@include respond-to('medium') {
+					text-align: center;
+					font-size: 25px;
+				}
+
+				@include respond-to('small') {
+					font-size: 20px;
+					text-align: center;
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+
+			.detail{
+				margin-bottom: 20px;
+				border: 1px solid #e1e1e1;
+				box-shadow: 0 0 8px 0 #e1e1e1;
+
+				@include respond-to('small') {
+					width: 100%;
+					margin: 0;		
+				}
+
+				summary {
+					padding-top: 19px;
+					padding-bottom: 19px;
+					padding-left: 16px;
+					margin:0;
+					font-weight: bolder;
+
+					@include respond-to('small') {
+						padding: 10px 20px 10px 10px;
+					}
+				}
+
+				p {
+					padding-top: 20px; 
+					padding-bottom: 32px;
+					padding-left: 13px; 
+					margin: 0;
+				}
+			}
+			
+			.detail[open] {
+				margin-bottom: 20px;
+				border: 1px solid #e1e1e1;
+				box-shadow:none;
+			
+					summary{
+						background: #18bb7c;
+						color: white;
+						font-size: 18px;
+						font-weight: normal;
+
+						@include respond-to('small') {
+							font-size: 15px;		
+						}
+					}
+			}
+		}
+	}
+}
+
+.education {
+	border-top: 1px solid #e1e1e1;
+	margin-bottom: 155px;
+
+	@include respond-to('medium') {
+		margin-bottom: 100px;
+	}
+	
+	@include respond-to('small') {
+		margin-bottom: 50px;		
+	}
+
+
+	.wrapper {
+		margin-top: 150px;
+		text-align: center;
+
+		@include respond-to('small') {
+			margin-top: 50px;		
+		}
+
+		h3 {
+			font-size: 36px;
+			text-transform: capitalize;
+			color: black;
+			margin-bottom: 0;
+
+			@include respond-to('small') {
+				font-size: 25px;		
+			}
+		}
+
+		h4 {
+			color: #18bb7c;
+			font-size: 20px;
+			font-weight: normal;
+			text-transform: capitalize;
+			margin-top: 25px; 
+			margin-bottom: 0;
+
+			@include respond-to('small') {
+				font-size: 20px;		
+			}
+		}
+
+		p {
+			width: 50%;
+			line-height: 1.8rem;
+			margin: 0 auto;
+			margin-top: 20px;
+			
+			@include respond-to('small') {
+				width: 80%;
+				text-align: left;		
+			}
+
+		}
+
+		.threeCircles {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin-top: 56px;
+
+			@include respond-to('medium') {
+				min-width: 100%;
+				flex-direction: column;
+			}
+
+			@include respond-to('small') {
+				width: 100%;
+			}
+
+			.courses, .information, .books {
+				width: 33.3%;
+
+				@include respond-to('medium') {
+					width: 100%;
+					text-align: center;
+					margin-bottom: 30px;
+				}
+
+				@include respond-to('small') {
+					width: 100%;
+				}
+			}
+			
+			h4 {
+				color: black;
+				text-transform: uppercase;
+				font-weight: bolder;
+				font-family: 'Raleway', sans-serif;
+				margin-top: 50px;
+
+				@include respond-to('medium') {
+					margin-top: 10px;
+				}
+
+				@include respond-to('small') {
+					flex-direction: column;	
+					margin-top: 5px;
+					font-size: 15px;	
+				}
+			}
+
+			p {
+				width: 80%;
+				line-height: 1.4rem;
+
+				@include respond-to('small') {
+					margin-top: 8px;	
+					margin-bottom: 10px;
+					// width: 200%;	
+				}
+			}
+		} 
+
+		button {
+			margin-top: 95px;
+			text-transform: uppercase;
+			font-size: 13px;
+			padding: 20px 40px;
+			border-radius: 50px;
+			color: white;
+			font-weight: bolder;
+			background: #18bb7c;
+			border: none;
+			margin-left: 10px;
+			margin-right: 10px;	
+
+			@include respond-to('medium') {
+				margin-top: 20px;
+			}
+
+			@include respond-to('small') {
+				margin-top: 30px;
+				width: 30%;
+				padding: 10px 0px;		
+			}
+		}
+	}
+}
+
+.featuredCourses {
+	background: #f8f8f8;
+	
+	h2 {
+		font-size: 35px;
+		color: black;
+		text-transform: uppercase;
+		text-align: center;
+		padding-top: 150px;
+
+		@include respond-to('medium') {
+			padding-top: 100px;
+		}
+
+		@include respond-to('small') {
+			font-size: 25px;
+			padding-top: 50px;
+		}
+	}
+
+	p {
+		text-align: center;
+		margin-top: 25px;
+		margin-bottom: 58px;
+
+		@include respond-to('small') {
+			text-align: left;
+			width: 80%;
+			margin: auto;
+			margin-bottom: 20px;		
+		}
+	}
+
+	.threeParts {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+
+		img {
+			width: 100%;
+		}
+
+		@include respond-to('medium') {
+			flex-direction: column;
+		}
+
+		@include respond-to('small') {
+			flex-direction: column;
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		.application, .multimedia {
+			margin-right: 40px;
+
+			@include respond-to('small') {
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+		}
+
+		.application, .multimedia, .chemical {
+			box-shadow: 0 0 12px 0 #e1e1e1;
+
+			@include respond-to('medium') {
+				text-align: center;
+				margin: 0;
+				margin-bottom: 30px;
+			}
+
+		}
+
+		.text1, .text2, .text3{
+			background: white;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			h5 {
+				padding-top: 20px;
+				font-size: 12px;
+				font-weight: normal;
+			}
+
+			h5:before {
+				content: "\f073";
+				font-family: FontAwesome;
+				display: inline-block;
+				margin-right: 10px;
+				padding-left: 30px;
+			}
+
+			h4 {
+				font-size: 14px;
+				text-transform: capitalize;
+				padding-left: 30px;
+				color: black;
+				font-weight: normal; 
+				margin-bottom: 0;
+			}
+
+			p {
+				font-size: 10px;
+				text-align: left;
+				padding-left: 30px;
+				padding-top: 20px;
+				margin-top: 0;
+				margin-right: 100px;
+				margin-bottom: 0;
+			}
+
+			button {
+				margin-left: 30px;
+				margin-top: 20px;
+				margin-bottom: 30px;
+				color: white;
+				font-size: 10px;
+				background: #18bb7c;
+				padding: 10px 18px;
+				border: none;
+				border-radius: 15px;
+			}				
+		}
+	}
+	.largeButton {
+		margin-top: 80px;
+		margin-bottom: 100px;
+		margin-left: 43%;
+		text-transform: uppercase;
+		font-family: 'Raleway', sans-serif;
+		font-weight: bolder;
+		padding: 23px 28px;
+		border:1px solid #00a651;
+		border-radius:40px;
+		background: none;
+		
+		@include respond-to('medium') {
+			font-size: 13px;
+			margin-top: 30px;
+			width: 30%;
+			padding: 20px 0px;	
+			margin-left: 35%;
+			margin-bottom: 80px;
+		}
+
+		@include respond-to('small') {
+			font-size: 13px;
+			margin-top: 30px;
+			width: 30%;
+			padding: 10px 0px;	
+			margin-left: 35%;
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.latestNews {
+	margin-top: 150px;
+
+	@include respond-to('medium') {
+		margin-top: 80px;
+	}
+
+	@include respond-to('small') {
+		margin-top: 50px;
+	}
+
+	h2 {
+		font-size: 35px;
+		color: black;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 75px;
+
+		@include respond-to('small') {
+			font-size: 25px;
+			margin-bottom: 40px;
+		}
+	}
+
+	.threeParts {
+		display: flex;
+		flex-direction: row;
+		
+		@include respond-to('medium') {
+			flex-direction: column;
+			width: 100%;
+			text-align: center;
+			margin: 0;
+		}
+
+		@include respond-to('small') {
+			flex-direction: column;
+			width: 80%;
+			margin: auto;
+		}
+
+		.glasses, .reading {
+			margin-left: 40px;
+
+			@include respond-to('medium') {
+				margin-left: 0;
+				margin-top: 30px;
+			}
+
+			@include respond-to('small') {
+				margin: auto;
+				margin-top: 30px;
+			}
+		}
+
+		.green {
+			position: relative;
+		}
+
+		.greenBox {
+			background: #18bb7c;
+			color: white;
+			font-size: 16px;
+			text-transform: uppercase;
+			font-family: 'Raleway', sans-serif;
+			font-weight: normal;
+			width: 20%;
+			text-align: center;
+			padding: 15px 18px;
+			position: absolute;
+			top: 210px;
+			left: 270px;
+			z-index: 999;
+
+			@include respond-to('medium') {
+				display: none;
+			}
+
+			@include respond-to('small') {
+				display: none;
+			}
+		}
+
+		h4 {
+			text-transform: capitalize;
+			color: black;
+			width: 65%;
+			font-family: 'Raleway', sans-serif;
+			line-height: 1.3rem;
+			
+			@include respond-to('medium') {
+				text-align: center;
+				width: 100%;
+			}
+
+			@include respond-to('small') {
+				width: 100%;
+			}
+		}
+
+		p {
+			font-size: 12px;
+			width: 70%;
+			margin-bottom: 0;
+			letter-spacing: 0.05rem;
+
+			@include respond-to('medium') {
+				width: 100%;
+				text-align: center;
+			}
+
+			@include respond-to('small') {
+				width: 100%;
+			}
+		}
+
+		a {
+			margin-top: 20px;
+			color: #18bb7c;
+			text-decoration: none;
+			margin-top: 25px;
+			display: block;
+		}
+
+		a:after {
+			content: "\f178";
+			font-family: FontAwesome;
+			display: inline-block;
+			margin-left: 6px;
+		}
+	}
+
+	.buttons {
+		text-align: center;
+	}
+
+	button {
+			margin-top: 94px;
+			text-transform: uppercase;
+			font-size: 13px;
+			padding: 20px 40px;
+			border-radius: 50px;
+			color: white;
+			font-weight: bolder;
+			background: #18bb7c;
+			border: none;
+			margin-left: 10px;
+			margin-right: 10px;	
+
+			@include respond-to('medium') {
+				margin-top: 50px;
+			}
+
+
+			@include respond-to('small') {
+				font-size: 13px;
+				width: 30%;
+				padding: 10px 10px;	
+				margin-top: 30px;
+			}
+		}
+}
+
+.teachers {
+	margin-top: 145px;
+	text-align: center;
+
+	@include respond-to('medium') {
+		margin-top: 100px;
+	}
+
+	@include respond-to('small') {
+		margin-top: 70px;
+	}
+
+	h2 {
+		font-size: 35px;
+		color: black;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 28px;
+
+		@include respond-to('small') {
+			font-size: 25px;
+		}
+	}
+
+	p {
+		width: 40%;
+		margin: 0 auto;
+		margin-bottom: 78px;
+
+		@include respond-to('medium') {
+			width: 100%;
+			margin-bottom: 50px;
+		}
+
+		@include respond-to('small') {
+			width: 80%;
+			text-align: left;
+			margin-bottom: 30px;
+		}
+	}
+
+	.threeParts {
+		display: flex;
+		flex-direction: row;
+
+		@include respond-to('medium') {
+			flex-direction: column;
+		}
+
+		@include respond-to('small') {
+			flex-direction: column;
+		}
+
+		.sylvia, .simon {
+			margin-right: 45px;
+
+			@include respond-to('medium') {
+				margin-right: 0;
+			}
+
+			@include respond-to('small') {
+				margin-right: 0;
+				width: 80%;
+				margin: auto;
+			}
+		}
+
+		.kristen {
+
+			@include respond-to('small') {
+				width: 80%;
+				margin: auto;
+			}
+		}
+
+		h3 {
+			text-transform: uppercase;
+			text-align: left;
+			font-size: 25px;
+			color: black;
+			margin-bottom: 0;
+
+			@include respond-to('medium') {
+				text-align: center;
+			}
+
+			@include respond-to('small') {
+				font-size: 20px;
+				text-align: center;
+			}
+		}
+
+		h4 {
+			text-align: left;
+			color: #18bb7c;
+			text-transform: capitalize;
+			margin-top: 22px;
+			margin-bottom: 0;
+
+			@include respond-to('medium') {
+				text-align: center;
+			}
+
+			@include respond-to('small') {
+				margin-top: 8px;
+			}
+		}
+
+		.connected {
+			display: flex;
+			flex-direction: row;
+			margin-top: 37px;
+
+			@include respond-to('medium') {
+				margin: 0 auto;
+				margin-top: 20px;
+				width: 35%;
+			}
+
+			@include respond-to('small') {
+				margin-top: 20px;
+			}
+
+			h4 {
+				color: #666666;
+				margin-top: 0;
+				text-transform: uppercase;
+				font-weight: normal;
+
+				@include respond-to('small') {
+					display: none;
+				}
+			}
+
+			.socialMedia {
+				margin-left: 30px;
+				margin-bottom: 105px;
+
+				@include respond-to('medium') {
+					margin-bottom: 60px;
+				}
+
+				@include respond-to('small') {
+					margin-bottom: 40px;
+					// display: block;
+					// margin-left: 0;
+				}
+
+				i {
+					color: #666666;
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+
+	button {
+		text-transform: uppercase;
+		font-size: 13px;
+		padding: 20px 40px;
+		border-radius: 50px;
+		color: white;
+		font-weight: bolder;
+		background: #18bb7c;
+		border: none;
+		margin-bottom: 0;
+
+		@include respond-to('small') {
+			font-size: 13px;
+			width: 40%;
+			padding: 15px 10px;	
+			margin-top: 0;
+		}
+	}
+}
+
+.pricing {
+	margin-top: 150px;
+	background: #f8f8f8;
+	text-align: center;
+
+	@include respond-to('medium') {
+		margin-top: 100px;
+	}
+
+	@include respond-to('small') {
+		margin-top: 50px;
+	}
+
+	h4 {
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: normal;
+		margin-top: 0;
+		padding-top: 150px;
+
+		@include respond-to('medium') {
+			padding-top: 100px;
+		}
+
+		@include respond-to('small') {
+			font-size: 15px;
+			padding-top: 50px;
+		}
+	}
+
+	h2 {
+		text-transform: uppercase;
+		color: black;
+		font-size: 30px;
+		margin-bottom: 65px;
+
+
+		@include respond-to('small') {
+			font-size: 25px;
+			line-height: 1.7rem;
+			margin-bottom: 30px;
+		}
+	}
+
+	.threeParts {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding-bottom: 150px;
+
+		@include respond-to('medium') {
+			flex-direction: column;
+			width: 100%;
+		}
+
+		@include respond-to('small') {
+			flex-direction: column;
+			width: 80%;
+			margin: 0 auto;
+			padding-bottom: 50px;
+		}
+
+		.trail, .standard, .premirer {
+			background: white;
+			box-shadow: 0 0 12px 0 #e1e1e1;
+			width: 30%; 
+
+			@include respond-to('medium') {
+				width: 80%;
+				margin: 0 auto;
+			}
+			
+			@include respond-to('small') {
+				width: 100%;
+			}
+
+
+			h3 {
+				text-transform: uppercase;
+				font-size: 24px;
+				font-family: 'Raleway',sans-serif;
+				color: black;
+			}
+
+			h4 {
+				background: #f8f8f8;
+				padding-top: 0;
+				text-transform: none;
+				padding: 37px 125px;
+				font-size: 14px;
+				color: black;
+				margin-bottom: 40px;
+
+				@include respond-to('large') {
+					padding: 20%;
+				}
+
+				span {
+					text-transform: capitalize;
+					display: block;
+					font-size: 18px;
+				}
+			}
+
+			p {
+				text-transform: capitalize;
+				text-align: left;
+				// justify-content: center;
+				// why justify-content doesn't work? how can I center the list? 
+				margin-top: 13px;
+				margin-left: 20%;
+
+				@include respond-to('medium') {
+					margin-left: 40%;
+				}
+
+				@include respond-to('small') {
+					margin-left: 25%;
+				}
+			}
+
+			p:before {
+				content: "\f00c";
+				font-family: FontAwesome;
+				display: inline-block;
+				color: #18bb7c;
+				margin-right: 13px;
+			}
+
+			a {
+				text-transform: uppercase;
+				text-decoration: none;
+				display: block;
+				color: #575555;
+				margin-top: 20%;
+				text-align: center;
+				padding: 8% 10%;
+				font-weight: bolder;
+				background: white;
+				border-top: 1px solid #e6e6e6;
+			}
+		}
+
+		.standard, .premirer {
+			margin-left: 40px;
+
+			@include respond-to('medium') {
+				width: 80%;
+				margin: 0 auto;
+				margin-top: 30px;
+			}
+
+			@include respond-to('small') {	
+				text-align: center;	
+				width: 100%;
+				margin-top: 30px;
+				margin-left: 0;		
+			}
+		}
+	}
+}
+
+.testmonial {
+	margin-top: 150px;
+	padding-bottom: 120px;
+
+	@include respond-to('medium') {	
+		margin-top: 80px;
+		padding-bottom: 30px;	
+	}
+
+	@include respond-to('small') {	
+		margin-top: 50px;
+		padding-bottom: 30px;	
+	}
+
+	h2 {
+		text-transform: uppercase;
+		color: black;
+		font-size: 30px;
+		margin-bottom: 65px;
+		text-align: center;
+
+		@include respond-to('small') {	
+			font-size: 25px;
+			margin-bottom: 30px;	
+		}
+	}
+
+	.twoParts {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include respond-to('small') {	
+			flex-direction: column;	
+		}
+
+		.ryan, .jhone {
+			display: flex;
+			flex-direction: row;
+			border: 1px solid #e6e6e6;
+			padding: 2% 2%; 
+			position: relative;
+			width: 48%;
+			margin: 0 auto;
+
+			@include respond-to('medium') {	
+				width: 100%;
+				margin-bottom: 30px;	
+			}
+
+			@include respond-to('small') {
+				width: 100%;
+			}
+
+			img {
+				align-self:flex-start;
+				margin-right: 20px;
+			}
+
+			p {
+				line-height: 1.8rem;
+			}
+
+			h4 {
+				font-family: 'Raleway',sans-serif;
+				font-size: 18px;
+				font-style: italic;
+				text-transform: capitalize;
+				color: black;
+				margin-bottom: 0;
+
+				span {
+					font-weight: normal;
+					margin-left: 4px;
+					color: #666666;
+				}
+			}
+
+		}
+
+		.ryan {
+
+			@include respond-to('medium') {	
+				margin-right: 0;
+			}
+
+			@include respond-to('small') {	
+				margin-left: 0;
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+	
+	.line {
+		height: 1px;
+		background: #18bb7c;
+		width: 80%;
+		position: absolute;
+		top: 0px;
+		left: 20%;
+	}
+
+	// Should I use position absoulute here?
+
+	.dots {
+		margin-top: 0;
+		display: flex;
+		justify-content: center;
+
+		.dot1, .dot2, .dot3 {
+			background: #b6b5b5;
+			margin-top: 380%;
+			width: 9px;
+			height: 9px;
+			border-radius: 55px;
+			text-align: center;
+			margin-left: 6px;
+
+			@include respond-to('small') {	
+				margin-top: 200%;	
+			}
+		}
+	}
+}
+
+.gallery {
+	border-top: 1px solid #e6e6e6;
+	margin-top: 0;
+
+	.wrapper {
+		margin-top: 120px;
+
+		@include respond-to('small') {	
+			margin-top: 50px;
+		}
+
+		h2 {
+			text-transform: uppercase;
+			color: black;
+			font-size: 30px;
+			margin-bottom: 35px;
+			text-align: center;
+
+			@include respond-to('small') {	
+				font-size: 25px;
+			}
+		}
+
+		p {
+			width: 35%;
+			text-align: center;
+			margin: 0 auto;
+			margin-bottom: 35px;
+
+			@include respond-to('small') {	
+				width: 80%;
+				margin-bottom: 20px;
+			}
+		}
+
+		.tags {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			text-transform: capitalize;
+			color: black;
+			
+			a {
+				font-family: 'Raleway',sans-serif;
+				font-size: 23px;
+				text-decoration: none;
+				font-weight: normal;
+				color: black;
+				padding: 14px 18px;
+				background: #f8f8f8;
+				margin-right: 10px;
+
+				@include respond-to('small') {	
+					font-size: 15px;
+				}
+			}		
+		}
+
+		ul {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			// why the flex wrap doesn't work
+			padding-left: 0;
+			margin-top: 50px;
+
+			@include respond-to('small') {	
+					margin-top: 25px;
+				}
+
+			li {
+				list-style-type: none;
+				width: 33.3%;
+				margin: 0;
+				position: relative;
+
+
+				img {
+					margin: 0;
+					display: block;
+				}
+			}
+
+			li:hover .overlay {
+				display: block;
+			}
+		
+		}
+
+		.overlay {
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			background: rgba(66,199,148,0.5);
+			display: none;
+				
+				.icons {
+					text-align: center;
+					margin-top: 35%;
+						@include respond-to('small') {margin-top: 30%;
+						}
+					
+					i {
+						padding: 15px;
+						border: 1px solid white;
+						border-radius: 50px;
+						font-size: 1.5rem;
+						color: white;
+						margin-right: 15px;
+
+						@include respond-to('small') {font-size: 0.9rem;
+							padding: 8px;
+							margin-right: 5px;
+						}
+					}
+				}
+		}
+
+		button {
+			margin-top: 80px;
+			margin-bottom: 130px;
+			margin-left: 43%;
+			text-transform: uppercase;
+			font-family: 'Raleway', sans-serif;
+			font-weight: bolder;
+			padding: 23px 55px;
+			border:1px solid #00a651;
+			border-radius:40px;
+			background: none;
+
+				@include respond-to('medium') {	
+					font-size: 15px;
+					width: 40%;
+					padding: 15px 10px;	
+					width: 30%;
+					margin-left: 35%;
+					margin-top: 20px;
+					margin-bottom: 50px;
+				}
+
+				@include respond-to('small') {	
+					font-size: 15px;
+					width: 40%;
+					padding: 15px 10px;	
+					margin-top: 20px;
+					margin-left: 30%;
+					margin-bottom: 50px;
+				}
+		}
+	}
+}
+
+.subscribe {
+	background: #42c794;
+
+	.wrapper {
+		display: flex;
+		flex-direction: row;
+
+		@include respond-to('medium') {	
+			flex-direction: column;
+		}	
+
+		@include respond-to('small') {	
+			flex-direction: column;
+		}
+
+		h3 {
+			color: white;
+			text-transform: uppercase;
+			font-family: 'Raleway', sans-serif;
+			font-size: 26px;
+			padding-top: 73px;
+			padding-bottom: 73px;
+
+			@include respond-to('medium') {	
+				font-size: 20px;
+				text-align: center;
+				padding-top: 15px;
+				padding-bottom: 5px;
+			}
+
+			@include respond-to('small') {	
+				font-size: 15px;
+				text-align: center;
+				padding-top: 20px;
+				padding-bottom: 10px;
+				margin-top: 0;
+			}
+		}
+
+		.input {
+			display: flex;
+			align-items: center;
+			margin-left: 160px;
+
+			@include respond-to('medium') {	
+				margin: auto;
+				margin-bottom: 40px;
+			}
+
+			@include respond-to('small') {	
+				margin: auto;
+				margin-bottom: 30px;
+			}
+
+			input {
+				background: none;
+				padding: 25px 175px 25px 32px;
+				border: 1px solid white;
+				border-radius: 35px 0 0 35px;
+
+				@include respond-to('medium') {	
+					padding: 10px 40px 10px 20px;
+					margin: 0;
+				}
+
+				@include respond-to('small') {	
+					padding: 10px 40px 10px 20px;
+					margin: 0;
+				}
+			}
+
+			input::placeholder {
+				color: white;
+				font-family: 'Raleway', sans-serif;
+				font-size: 18px;
+				text-transform: capitalize;
+				font-weight: bolder;
+				min-width: 400%;
+
+				@include respond-to('medium') {
+					font-size: 15px;
+				}
+
+				@include respond-to('small') {	
+					font-size: 15px;
+				}
+				// why the default width of text is so small? If the font size is smaller, it will appear otherwise it will lose some text				
+			} 
+
+			.submit {
+				text-transform: uppercase;
+				color: white;
+				font-size: 18px;
+				font-family: 'Raleway', sans-serif;
+				font-weight: bold;
+				border-left: none;
+				border-radius: 0 35px 35px 0;
+				padding-top: 20px;
+				padding-right: 38px;
+				padding-left: 58px;
+
+				@include respond-to('medium') {	
+					padding: 10px 20px 8px 40px;
+					font-size: 15px;
+				}
+
+				@include respond-to('small') {	
+					padding: 10px 20px 8px 40px;
+					font-size: 15px;
+				}
+
+				input[type="submit"] {	
+					background-image: url(..Assets/plane.png);
+					background-repeat: no-repeat;
+					// background-position: 270px 20px;
+				}
+			}
+		}
+	}
+}
+
+.getInTouch {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 100px;
+
+	@include respond-to('medium') {	
+		margin-top: 50px;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	@include respond-to('small') {	
+		margin-top: 50px;
+		flex-direction: column;
+	}
+
+	h3 {
+		color: black;
+		text-transform: capitalize;
+		font-family: 'Raleway', sans-serif;
+		margin-top: 0;
+		font-size: 28px;
+
+		@include respond-to('small') {	
+			font-size: 20px;
+			text-align: center;
+		}
+	}
+
+	.contactForm {
+		width: 70%;
+
+		@include respond-to('medium') {	
+			width: 100%;
+			text-align: center;
+		}
+
+		@include respond-to('small') {	
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+
+	.name, .email {
+		padding-top: 24px;
+		padding-bottom: 24px;
+		padding-left: 40px;
+		width: 48%;
+		border-radius: 10px;
+		border:1px solid #cccccc;
+
+		@include respond-to('small') {	
+			padding: 10px 150px 10px 20px;
+		}
+	}
+
+	.name {
+		margin-right: 20px;
+		margin-bottom: 10px;
+
+		@include respond-to('small') {	
+			margin-right: 0;
+			width: 100%;
+			margin-bottom: 0;
+		}
+	}
+
+	.email {
+		// margin-left: 30px;
+
+		@include respond-to('medium') {	
+			margin-left: 0;
+			margin-top: 12px;
+		}
+
+		@include respond-to('small') {	
+			margin-left: 0;
+			width: 100%;
+		}
+
+	}
+
+	.subject {
+		padding-top: 24px;
+		padding-bottom: 24px;
+		padding-left: 40px;
+		width: 99%;
+		border-radius: 10px;
+		margin-top: 15px;
+		border: 1px solid #cccccc;
+
+		@include respond-to('medium') {	
+			padding: 24px 200px 24px 40px;
+			margin-top: 12px;
+		}
+
+		@include respond-to('small') {	
+			padding: 10px 150px 10px 20px;
+			margin-top: 8px;
+		}
+	}
+
+	.message {
+		margin-top: 25px;
+		padding-top: 24px;
+		padding-bottom: 100px;
+		padding-left: 40px; 
+		width: 99%;
+		border-radius: 10px;
+		border: 1px solid #cccccc;
+		margin-right: 0;
+
+		@include respond-to('medium') {	
+			padding: 24px 200px 80px 40px;
+			margin-top: 20px;
+		}
+
+		@include respond-to('small') {	
+			padding: 10px 150px 80px 20px;
+			margin-top: 8px;
+		}
+	}
+
+	input::placeholder {
+		text-transform: capitalize;
+		font-size: 20px;
+		font-weight: lighter;
+		min-width: 400%;
+		margin-right: 0;
+		// same problem, the text won't show up if I don't put 400% width 
+
+		@include respond-to('small') {	
+			font-size: 14px;
+		}
+	}
+
+	button {
+		text-transform: capitalize;
+		background: #18bb7c;
+		color: white;
+		font-size: 18px;
+		font-weight: bold;
+		font-family: 'Raleway', sans-serif; 
+		border: none;
+		padding: 22px 40px;
+		margin-top: 28px;
+		border-radius: 15px;
+		margin-bottom: 20px;
+
+		@include respond-to('medium') {	
+			margin-bottom: 40px;
+		}
+
+		@include respond-to('small') {
+			font-size: 13px;
+			width: 40%;
+			padding: 15px 10px;
+			margin-top: 20px;
+		}
+	}
+
+	.address {
+		margin-left: 40px;
+		width: 26%;
+
+		@include respond-to('medium') {
+			margin: 0 auto;
+			margin-top: 20px;
+			width: 80%;
+		}
+
+		@include respond-to('small') {
+			margin: 0 auto;
+			margin-top: 40px;
+			width: 80%;
+		}
+
+		.location, .phone, .mail {
+			display: flex;
+			margin-top: 20px;
+
+			@include respond-to('medium') {
+				margin: 0 auto;
+				width: 80%;
+			}
+
+			@include respond-to('small') {
+				margin-top: 10px;
+			}
+		}
+
+		p {
+			margin-left: 33px;
+			font-size: 18px;
+			margin-top: 5px;
+			line-height: 1.8rem;
+
+			@include respond-to('medium') {
+				text-align: left;
+			}
+
+			@include respond-to('small') {
+				font-size: 14px;
+				margin-bottom: 0;
+			}
+		}
+
+		.phone p {
+			width: 65%;
+		}
+
+		i {
+			color: white;
+			background: #18bb7c;
+			font-size: 1.4rem;
+			padding: 15px;
+			align-self: flex-start;
+			border-radius: 50%;
+		}
+
+		.fa-map-marker {
+			padding: 15px 17px 10px 17px;
+		}
+
+		.fa-phone {
+			padding: 15px 17px 12px 15px;
+		}
+	}
+}
+
+
+
+
+
+
